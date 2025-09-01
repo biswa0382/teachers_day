@@ -14,7 +14,7 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            overflow: hidden; /* Hide scrollbars from canvas/background elements */
+            /* overflow: hidden; */ /* Removed to allow scrolling on smaller screens */
         }
         .font-orbitron {
             font-family: 'Orbitron', sans-serif;
@@ -28,6 +28,7 @@
             box-shadow: 0 0 25px rgba(52, 211, 153, 0.3);
             position: relative;
             z-index: 10;
+            margin: 2rem 0; /* Add some margin for smaller screens */
         }
         .glow {
             text-shadow: 0 0 8px rgba(52, 211, 153, 0.8), 0 0 10px rgba(52, 211, 153, 0.6);
@@ -89,7 +90,7 @@
 
         /* Background Grid */
         .background-grid {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -103,7 +104,7 @@
         
         /* Digital Rain Effect */
         .digital-rain {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -148,7 +149,12 @@
                 </div>
                 <h2 class="font-orbitron text-4xl md:text-5xl font-bold glow">TEACHER'S DAY</h2>
                 <h3 class="font-orbitron text-3xl md:text-4xl font-bold text-white mb-4">CELEBRATION</h3>
-                <p class="text-lg text-gray-200">You are cordially invited!</p>
+                <p class="text-lg text-gray-200 max-w-lg">A special invitation for our esteemed mentors:</p>
+                <div class="mt-4">
+                    <p class="font-orbitron text-2xl text-emerald-300 font-bold">Prof. Sudhakar Kumawat</p>
+                    <p class="font-orbitron text-2xl text-emerald-300 font-bold mt-2">Prof. Manisha Varma</p>
+                </div>
+                <p class="mt-6 text-xl text-white font-semibold">We cordially invite you to join us.</p>
             </div>
             
             <!-- Event Details -->
@@ -215,4 +221,5 @@
 </script>
 </body>
 </html>
+
 
